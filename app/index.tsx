@@ -1,15 +1,24 @@
-import { Text, View } from "react-native";
-
-export default function Index() {
+import React from 'react'
+import { createStackNavigator } from '@react-navigation/stack';
+import { Colors } from '@constants';
+import { StatusBar } from 'react-native';
+import { Login, SplashScreen } from '@screens';
+StatusBar.setBarStyle('light-content', true);
+StatusBar.setBackgroundColor(Colors.light.background);
+const Stack = createStackNavigator();
+export default function App() {
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Text>Edit app/index.tsx to edit this screen.</Text>
-    </View>
+    <Stack.Navigator>
+      <Stack.Screen
+        name='SplashScreen'
+        component={SplashScreen}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name='Login'
+        component={Login}
+        options={{ headerShown: false }}
+      />
+    </Stack.Navigator>
   );
 }
