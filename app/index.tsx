@@ -8,7 +8,7 @@ StatusBar.setBackgroundColor(Colors.light.background);
 const Stack = createStackNavigator();
 export default function App() {
   return (
-    <Stack.Navigator>
+    <Stack.Navigator initialRouteName='Login'>
       <Stack.Screen
         name='SplashScreen'
         component={SplashScreen}

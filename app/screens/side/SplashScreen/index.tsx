@@ -11,7 +11,7 @@ const  SplashScreen = () => {
     const timer = setTimeout(() => {
       router.replace("/screens/auth/Login")
     }
-    , 2000)
+    , 3000)
     return () => clearTimeout(timer)
   },[])
 
